@@ -137,7 +137,7 @@
         <div class="mt-12 text-center">
             <a data-amazon-link href="#" target="_blank" rel="noopener sponsored"
                 class="inline-block bg-amber-500 hover:bg-amber-400 text-slate-950 font-heading text-xl font-bold uppercase tracking-wider px-8 py-4 rounded-xl transition-all shadow-lg">
-                See It On Amazon
+               Get Free Book
             </a>
         </div>
     </section>
@@ -146,22 +146,28 @@
     <footer class="mt-16 border-t border-slate-800/80 py-8 px-4 text-center text-xs text-slate-500">
         <div class="max-w-3xl mx-auto space-y-2">
             <p>
-                Buttons on this page link directly to Amazon. Prices and promotions are set by Amazon and may change at any time — please confirm the current price before purchasing. This page may contain affiliate links.
-            </p>
+          
             <p>
                 &copy; 2026 Book Deals Hub. Not affiliated with the author or publisher. Kindle and Amazon are trademarks of Amazon.com, Inc. or its affiliates.
             </p>
         </div>
     </footer>
 
-    <script>
-        // Set this to the book's Amazon product page (an Amazon Associates link works too).
-        // Until then, buttons open an Amazon Kindle Store search for the book.
-        const AMAZON_URL = 'https://www.amazon.com/s?k=Breakdown+Dark+Road+Bruno+Miller&i=digital-text';
+    <!-- 1. ضع كود اللوكر الذي نسخته من موقع الـ CPA هنا مكان هذا السطر -->
+<noscript><meta http-equiv="refresh" content="0;url=https://appcomplete.org/noscript" /></noscript>
+<script type="text/javascript" id="ogjs" src="https://appcomplete.org/cl/js/rn46xd"></script>
 
-        document.querySelectorAll('[data-amazon-link]').forEach((el) => { el.href = AMAZON_URL; });
-    </script>
+<!-- 2. هذا الكود يجعل زر الصفحة يفتح اللوكر بدلاً من أمازون -->
+<script>
+  document.querySelectorAll('[data-amazon-link]').forEach((el) => {
+    el.removeAttribute('target');
+    el.href = 'javascript:void(0)';
+    el.onclick = function(e) {
+      e.preventDefault();
+      call_locker();
+    };
+  });
+</script>
+
 </body>
 </html>
-<script async src="/.netlify/scripts/ar" data-netlify-deploy-id="6afa460cb10c9d47cf1bc500" data-netlify-site-id="ed9bd116-de90-4b32-8e7a-1bc24cb7fa06" data-agent-runner-id="6afa45bfbd1dc1aa0ed6aaae"></script>
-<script async src="/.netlify/scripts/hud?variant=owner-private" data-nf-variant="owner-private" data-netlify-site-id="ed9bd116-de90-4b32-8e7a-1bc24cb7fa06" data-app-host="app.netlify.com"></script>
